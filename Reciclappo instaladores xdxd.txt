@@ -1,0 +1,19 @@
+python -m venv myvenv
+myvenv\Scripts\activate
+pip install django
+python -m pip install --upgrade pip
+pip install djangorestframework
+pip install django-rest-auth
+pip install django-allauth
+
+
+django-admin startproject mysite .
+python manage.py migrate
+python manage.py runserver
+
+
+ Lista de usuarios= http://127.0.0.1:8000/api/usuarios/
+
+Iniciar sesion = http://127.0.0.1:8000/api/rest-auth/login/
+Salir = http://127.0.0.1:8000/api/rest-auth/logout/
+Registro = 127.0.0.1:8000/api/rest-auth/registration/
