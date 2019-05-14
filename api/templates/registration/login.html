@@ -1,12 +1,27 @@
 {% extends 'base.html' %}
+{% load static %}
+
+
 
 {% block title %}Login{% endblock %}
 
+
 {% block content %}
-<h2>Login</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Login</button>
-</form>
+
+<header class="feature-area section-padding-top" id="features_page">
+    <div class="container">
+        <div class="contenedor-form" id="formInicio d-none">
+            <div class="container-log">
+                    <h2>Iniciar sesión</h2>
+                    
+                <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" name="iniciar" id="iniciar" value="Login">Iniciar sesión</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</header>
 {% endblock %}
